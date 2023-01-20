@@ -6,10 +6,14 @@ let pokemonList = [
     { name: 'Exeggutor', height: 2, types: ['psychic', 'grass'] }
 ];
 
-for (let i = 0; i < pokemonList.length; i++) {
-    if (pokemonList[i].height < 1.7) {
-        document.write(pokemonList[i].name + " (height: " + pokemonList[i].height + ")<br>");
-    } else if (pokemonList[i].height > 1.7) {
-        document.write(pokemonList[i].name + " (height: " + pokemonList[i].height + ") - Wow! That's big!<br>");
-    }
-}
+// for (let i = 0; i < pokemonList.length; i++) {
+//     if (pokemonList[i].height < 1.7) {
+//         document.write(pokemonList[i].name + " (height: " + pokemonList[i].height + ")<br>");
+//     } else if (pokemonList[i].height > 1.7) {
+//         document.write(pokemonList[i].name + " (height: " + pokemonList[i].height + ") - Wow! That's big!<br>");
+//     }
+// }
+
+pokemonList.forEach(function(pokemon) {
+    document.write(pokemon.name + " (height: " + pokemon.height + ")</p>");
+});
