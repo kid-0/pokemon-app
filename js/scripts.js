@@ -56,5 +56,5 @@ let pokemonRepository = (function () {
 // }
 
 pokemonRepository.getAll().forEach(function(pokemon) {
-    document.write(pokemon.name + " (height: " + pokemon.height + ")</p>");
+    pokemonRepository.addListItem(pokemon);
 });
