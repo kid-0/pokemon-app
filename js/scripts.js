@@ -8,6 +8,8 @@ let pokemonRepository = (function () {
         { name: 'Exeggutor', height: 2, types: ['psychic', 'grass'] }
     ];
     
+    let pokemonList = [];
+
     function getAll() {
         return pokemonList;
     }
