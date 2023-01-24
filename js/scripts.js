@@ -10,6 +10,8 @@ let pokemonRepository = (function () {
     
     let pokemonList = [];
 
+    let apiURL = 'https://pokeapi.co/api/v2/pokemon/';
+
     function getAll() {
         return pokemonList;
     }
