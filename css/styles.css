@@ -69,3 +69,8 @@ html, body {
 .modal-height {
   margin-bottom: 0;
 }
+
+.modal-container {
+  display: none;
+}
+
