@@ -4,6 +4,21 @@ let pokemonRepository = (function () {
 
     let apiURL = 'https://pokeapi.co/api/v2/pokemon/?limit=250/';
 
+    function loadList() {
+        return fetch(apiURL).then(function (response) {
+            return response.json();
+        }).then(function (json) {
+            json.results.forEach(function (item) {
+                let pokemon = {
+                    name: item.name,
+                    detailsURL: item.url,
+                };
+                add(pokemon);
+            });
+        }).catch(function (e) {
+            console.error(e);
+        });
+    }
 
     function getAll() {
         return pokemonList;
