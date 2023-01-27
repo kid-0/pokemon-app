@@ -66,6 +66,54 @@ let pokemonRepository = (function () {
         });
     }
 
+    function showModal(pokemon) {
+
+        let modalContainer = document.querySelector('.modal-container');
+
+        // clear all existing content
+        modalContainer.innerHTML = '';
+
+        let modal = document.createElement('div');
+        modal.classList.add('modal');
+
+        // add new content
+        let closeButtonElement = document.createElement('button');
+        closeButtonElement.classList.add('modal-close');
+        closeButtonElement.innerText = 'Close';
+        closeButtonElement.addEventListener('click', hideModal);
+
+        let nameElement = document.createElement('h1');
+        nameElement.classList.add('modal-name');
+        nameElement.innerText = pokemon.name;
+
+        let heightElement = document.createElement('p');
+        heightElement.classList.add('modal-height');
+        heightElement.innerText = 'Height: ' + pokemon.height;
+
+        //creating a container for the pokemon image and give it a class
+        let imgContainer = document.createElement('div');
+        imgContainer.classList.add('img-container');
+
+        //creating the image element
+        let imgElement = document.createElement('img');
+        imgElement.classList.add('modal-img');
+        imgElement.src = pokemon.image;
+
+        modal.appendChild(closeButtonElement);
+        modal.appendChild(nameElement);
+        modal.appendChild(heightElement);
+        imgContainer.appendChild(imgElement);
+        modal.appendChild(imgContainer);
+        modalContainer.appendChild(modal);
+
+        modalContainer.classList.add('is-visible');
+
+        modalContainer.addEventListener('click', (e) => {
+            // since this is also triggered when clicking inside the modal we only want to close if the user clicks directly on the overlay
+            let target = e.target;
+            if (target === modalContainer) {
+              hideModal();
+            }
         });
     }
 
