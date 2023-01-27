@@ -65,3 +65,7 @@ html, body {
 .modal-name {
   margin-top: 0;
 }
+
+.modal-height {
+  margin-bottom: 0;
+}
