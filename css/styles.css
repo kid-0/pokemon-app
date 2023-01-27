@@ -74,3 +74,7 @@ html, body {
   display: none;
 }
 
+.modal-container.is-visible {
+  display: block
+}
+
