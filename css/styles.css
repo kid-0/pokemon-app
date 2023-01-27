@@ -51,3 +51,13 @@ html, body {
   text-align: left;
 }
 
+.modal-close {
+  float: right;
+  -webkit-appearance: none;
+  appearance: none;
+  border: 0;
+  background: none;
+  color: black;
+  text-decoration: underline;
+  cursor: pointer;
+}
