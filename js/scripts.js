@@ -58,39 +58,14 @@ let pokemonRepository = (function () {
         pokemon_list.appendChild(listItem);
     }
 
-    function loadList() {
-        return fetch(apiURL).then(function (response) {
-            return response.json();
-        }).then(function (json) {
-            json.results.forEach(function(item) {
-                let pokemon = {
-                    name: item.name,
-                    detailsURL: item.url
-                };
-                add(pokemon);
-            });
-        }).catch(function (e) {
-            console.error(e);
-        })
-    }
 
-    function loadDetails(item) {
-        let url = item.detailsURL;
-        return fetch(url).then(function(response) {
-            return response.json();
-        }).then(function(details) {
-            // now we add the details to the item
-            item.imageURL = details.sprites.front_default;
-            item.height = details.height;
-            item.types = details.types;
-        }).catch(function(e) {
-            console.error(e);
+
+    function showDetails(pokemon) {
+        loadDetails(pokemon).then(function () {
+            showModal(pokemon);
         });
     }
 
-    function showDetails (pokemon){
-        loadDetails(pokemon).then(function() {
-            console.log(pokemon);
         });
     }
 
