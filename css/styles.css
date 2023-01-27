@@ -61,3 +61,7 @@ html, body {
   text-decoration: underline;
   cursor: pointer;
 }
+
+.modal-name {
+  margin-top: 0;
+}
