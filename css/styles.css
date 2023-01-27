@@ -78,3 +78,12 @@ html, body {
   display: block
 }
 
+.img-container {
+  display: block;
+  text-align: center;
+  position: relative;
+}
+
+.modal-img {
+  width: 50%;
+}
