@@ -46,18 +46,18 @@ let pokemonRepository = (function () {
 
         let listItem = document.createElement('li');
 
-        listItem.addClass("list-group-item");
+        $(listItem).addClass("list-group-item");
     
-        let button = $(`<button type="button" class="pokemon-button btn btn-primary" data-toggle="modal" data-target="#detailsModal"></button>`);
+        let button = $('<button type="button" class="pokemon-button btn btn-primary" data-toggle="modal" data-target="#detailsModal"></button>');
         button.innerText = pokemon.name;
         // button.addClass("pokemon-button btn btn-primary");
         // button.addEventListener('click', () => {
         //     showDetails(pokemon);
         // });
     
-        listItem.append(button);
+        $(listItem).append(button);
     
-        pokemon_list.append(listItem);
+        $(pokemon_list).append(listItem);
     }
 
 
