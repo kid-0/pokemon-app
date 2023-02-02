@@ -50,10 +50,10 @@ let pokemonRepository = (function () {
     
         let button = $(`<button type="button" class="pokemon-button btn btn-primary" data-toggle="modal" data-target="#detailsModal"></button>`);
         button.innerText = pokemon.name;
-        button.classList.add('pokemon-button');
-        button.addEventListener('click', () => {
-            showDetails(pokemon);
-        });
+        // button.addClass("pokemon-button btn btn-primary");
+        // button.addEventListener('click', () => {
+        //     showDetails(pokemon);
+        // });
     
         listItem.appendChild(button);
     
