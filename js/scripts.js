@@ -55,9 +55,9 @@ let pokemonRepository = (function () {
         //     showDetails(pokemon);
         // });
     
-        listItem.appendChild(button);
+        listItem.append(button);
     
-        pokemon_list.appendChild(listItem);
+        pokemon_list.append(listItem);
     }
 
 
