@@ -65,8 +65,42 @@ let pokemonRepository = (function () {
     }
 
     function showModal(pokemon) {
-        let modalHeader = document.querySelector('.modal-header');
-        modalHeader.innerText = pokemon.name;
+        // let modalHeader = document.querySelector('.modal-header');
+        // modalHeader.innerText = pokemon.name;
+
+        // let heightElement = document.createElement('p');
+        // heightElement.classList.add('modal-height');
+        // heightElement.innerText = 'Height: ' + pokemon.height;
+
+        // // creating a container for the pokemon image and give it a class
+        // let imgContainer = document.createElement('div');
+        // imgContainer.classList.add('img-container');
+
+        // //creating the image element
+        // let imgElement = document.createElement('img');
+        // imgElement.classList.add('modal-img');
+        // imgElement.src = pokemon.image;
+
+        // imgContainer.appendChild(imgElement);
+
+        // let modalBody = document.querySelector('.modal-body');
+
+        // modalBody.appendChild(heightElement);
+        // modalBody.appendChild(imgContainer);
+
+        let modalBody = $('.modal-body');
+        let modalHeader = $('.modal-header');
+  
+        modalBody.empty();
+        modalHeader.text(pokemon.name);
+  
+        let height = $('<p>' + 'Height:  ' + pokemon.height + '</p>');
+        let image = $(`<img class="pokemon-img" src="${pokemon.image}"</img>`);
+          
+        modalBody.append(image);
+        modalBody.append(height);
+  
+      }
 
         let heightElement = document.createElement('p');
         heightElement.classList.add('modal-height');
